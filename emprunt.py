@@ -3,7 +3,7 @@
 
 class Emprunt():
     def __init__(self,livre,utilisateur,date_emprunt,date_retour):
-        # code d'instanciation des atrabuts de l'objet emprunt
+        # code d'instanciation des atributs de l'objet emprunt
         # livre ici represente un objet de la class livre de meme que utilisateur est un objet de la class utilisateur
 
         pass
