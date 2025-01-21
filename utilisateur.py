@@ -1,17 +1,37 @@
-
-# ROLAND
-
 class Utilisateur:
-    def __init__(self,nom,mot_de_passe,role):
-        # code d'initialisation des attributs
-        pass
-    
-    def charger_utilisateurs():
-        # ouvre et lie le fichier Utilisateurs.txt ligne par ligne et enregistre maintenant les informations dans une liste. retourner cette liste(prendre pour separateur la virgule)
+    def __init__(self, nom, prenom, identifiant):
+        self.nom = nom
+        self.prenom = prenom
+        self.identifiant = identifiant
+        self.emprunts = []  # Liste pour stocker les emprunts de l'utilisateur
 
-        pass
+    def emprunter(self, livre):
+        """Ajoute un livre à la liste des emprunts de l'utilisateur."""
+        if livre not in self.emprunts:
+            self.emprunts.append(livre)
+            print(f"{self.prenom} {self.nom} a emprunté le livre: {livre}")
+        else:
+            print(f"{self.prenom} {self.nom} a déjà emprunté ce livre.")
 
-    def login(self,mot_de_passe,nom):
-        # vérifie que le mot de passe et le nom entrer par l'utilisateur sont correct.pour cela juste faire appel a la fonction charger_utilisateurs et ensuite parcourir chaque élément et vérifier avec les entrées de l'utilisateur , si correct recuperer et retourner son role , sinon message d'erreur
+    def rendre(self, livre):
+        """Retire un livre de la liste des emprunts de l'utilisateur."""
+        if livre in self.emprunts:
+            self.emprunts.remove(livre)
+            print(f"{self.prenom} {self.nom} a rendu le livre: {livre}")
+        else:
+            print(f"{self.prenom} {self.nom} n'a pas emprunté ce livre.")
 
-        pass
+    def afficher_emprunts(self):
+        """Affiche tous les emprunts de l'utilisateur."""
+        if self.emprunts:
+            print(f"Emprunts de {self.prenom} {self.nom}: {', '.join(self.emprunts)}")
+        else:
+            print(f"{self.prenom} {self.nom} n'a pas d'emprunts.")
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    utilisateur1 = Utilisateur("roland", "lonts", "001")
+    utilisateur1.emprunter("Le Petit Prince")
+    utilisateur1.afficher_emprunts()
+    utilisateur1.rendre("Le Petit Prince")
+    utilisateur1.afficher_emprunts()
