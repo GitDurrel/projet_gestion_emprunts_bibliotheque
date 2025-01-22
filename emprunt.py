@@ -1,5 +1,5 @@
-
-
+from utilisateur import Utilisateur
+from livres import Livre
 # THIERRY
 
 class Emprunt():
