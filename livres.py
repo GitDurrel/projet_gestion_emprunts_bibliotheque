@@ -32,18 +32,3 @@ class Livre:
                 print(f"le fichier {fichier} n'a pas ete trouve.")
         except Exception as e:
             print(f"une erreur {e} s'est produite")
-# Exemples d'utilisation 
-# Creation d'une instance livre
-livre1 = Livre("Les Miserable", "Victor Hugo", "Drame")
-livre2 = Livre("Les 48 lois", "Robert Greens", "Histoire")
-livre3 = Livre("La Chervre de ma mere", "Nicolas", "Nostalgie")
-# Emprunter le livre
-print(livre1.emprunter())
-
-# Chargement des livres depuis un fichier
-livres = Livre.charger_livres("livres.txt")
-if isinstance(livres,list):
-    for livre in livres:
-        print(f"Titre:{livre.titre}, Auteur:{livre.auteur}, Genre:{livre.genre}")
-    else:
-        print(livres)
