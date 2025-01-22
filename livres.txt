@@ -1,3 +1,4 @@
-title1,autor1,genre1
-title2,autor2,genre2
-title3,autor3,genre3
+
+Les Miserable, Victor Hugo, Drame
+Les 48 lois, Robert Greens, Histoire
+La Chervre de ma mere, Nicolas, Nostalgie
