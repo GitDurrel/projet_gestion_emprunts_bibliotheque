@@ -6,7 +6,7 @@ class Emprunt():
     def __init__(self,livre,utilisateur,date_emprunt,date_retour):
         # code d'instanciation des atrabuts de l'objet emprunt
         # livre ici rclass Emprunt():
-     def __init__(self, livre, utilisateur, date_emprunt, date_retour):
+    #  def __init__(self, livre, utilisateur, date_emprunt, date_retour):
         # Initialisation des attributs de l'objet emprunt
         self.livre = livre            # Objet de la classe Livre
         self.utilisateur = utilisateur # Objet de la classe Utilisateur
@@ -45,10 +45,7 @@ class Emprunt():
         return emprunts
 
 
-        pass
+        
     
 
-    def charger_emprunts():
-        # ouvre et lie le fichier livres.txt ligne par ligne et enregistre maintenant les informations dans une liste et retourner la liste(prendre pour separateur la virgule)
-        
-        pass
+
